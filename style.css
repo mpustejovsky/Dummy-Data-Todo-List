@@ -1,1 +1,21 @@
 
+.isFalse {
+    color: red;
+}
+
+.isTrue{
+    color: green;
+}
+
+#todo-list button {
+    width: 150px;
+    height: 20px;
+    color: white;
+}
+
+#todo-list {
+    background-color: lightgray;
+    width: 600px;
+    height: 600px;
+    overflow: scroll;
+  }

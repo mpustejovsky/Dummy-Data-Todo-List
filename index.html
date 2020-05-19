@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Test Site</title>
       
     <link href="https://fonts.googleapis.com/css?family=Akronim|Slabo+27px&display=swap" rel="stylesheet">
   </head>
   <body>
-    <button onclick="fetchTodos()">Fetch Todos</button>
+    <button id="numberof" onclick="fetchTodos()">Fetch Todos</button>
     <button onclick="logTodos()">Log Todos</button>
-    <button onclick="populateTodos()">Populate Todos</button>
-    <ol id="todo-list">
+    <button onclick="populateTodos()">Populate 20 Todos</button>
+    <button onclick="reloadPage()">Update List "with completes"</button>
+    <div><ol id="todo-list">
       
-    </ol>
+    </ol></div>
   </body>
 </html>
