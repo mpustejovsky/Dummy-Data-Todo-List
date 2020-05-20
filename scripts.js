@@ -40,22 +40,28 @@
 
   
   const populateTodos = () => {
-
-    $("ol").empty();
+    
     let apple= nextlist + 1
-    document.getElementById("todo-list").setAttribute("start", apple)
+
+    if (nextlist != arrayOfTodos.length)
+    {$("ol").empty();   
+    
+    document.getElementById("todo-list").setAttribute("start", apple)}
+
     for(let i=0;i<20;i++) {
      
     if (nextlist<arrayOfTodos.length){
-      
+    var listnumber = apple+i-1;
     var node = document.createElement("LI");
+    node.setAttribute("id", "li_num"+listnumber)
   
  
  
     var textnode = document.createTextNode(arrayOfTodos[nextlist].title);
     var check =arrayOfTodos[nextlist].completed;
                     if (check == false)
-                        {node.classList.add("isFalse")
+                        { 
+                          node.classList.add("isFalse")
                         
                         }
       
@@ -76,8 +82,7 @@
 
     nextlist++
     console.log(nextlist)
-    if (nextlist == arrayOfTodos.length)
-    {return}
+    
 
    
 
@@ -95,5 +100,7 @@ const myfunction = (numlist) => {
   mynumber=numlist.substring(9,12)
   let helpme = parseInt(mynumber);
   arrayOfTodos[helpme].completed="true"
+ 
+  document.getElementById("li_num"+helpme).style.color = "green";
   console.log(helpme)
 }

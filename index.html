@@ -10,12 +10,25 @@
       
     <link href="https://fonts.googleapis.com/css?family=Akronim|Slabo+27px&display=swap" rel="stylesheet">
   </head>
+  
   <body>
+    <header>Mark's ToDo List</header>
+    <div class="button_holder">
+    <p>Step 1: Click to get Todos from Data base</p>
     <button id="numberof" onclick="fetchTodos()">Fetch Todos</button>
-    <button onclick="logTodos()">Log Todos</button>
+
+    <!-- <button onclick="logTodos()"></button> -->
+    <p>Step 2: Click to show next 20 Todos</p>
     <button onclick="populateTodos()">Populate 20 Todos</button>
-    <button onclick="reloadPage()">Update List "with completes"</button>
-    <div><ol id="todo-list">
+    <p>Step 3: Click complete on any Todos completed and click button below to cycle back through list</p>
+    <button onclick="reloadPage()">Back to Start of List</button>
+    </div>
+    
+    <div class="list_holder">
+      <div class="top_button">
+        </div>  
+  
+      <ol id="todo-list">
       
     </ol></div>
   </body>
